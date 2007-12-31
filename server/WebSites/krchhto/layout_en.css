@@ -1,0 +1,77 @@
+@charset "utf-8";
+#dvLogo {
+	background: url(showpics.aspx?id=logoen) no-repeat left top !important;
+}
+.searchbox {
+	direction: ltr !important;
+}
+#menu {
+	background: #000000 url(bg_menu_en.png) no-repeat !important;
+	direction: ltr !important;
+}
+#menu li {
+	float: left;
+}
+#menu ul {
+	padding: 16px 0 0 31px !important;
+}
+#page {
+	background: #ffffff url(bg_page_en.png) repeat-y !important;
+}
+#content {
+	float: right !important;
+	direction: ltr !important;
+	font-family: Tahoma !important;
+	text-align: justify !important;
+	padding: 0 20px 0 10px !important;
+}
+.posts .title {
+	direction: ltr !important;
+}
+.posts .meta .date {
+	float: right !important;
+}
+#dvNews {
+	direction: ltr !important;
+}
+.posts li .newsbody .pic, .newsbody .pic {
+	float: right !important;
+	margin-left: 10px !important;
+}
+.posts li .newsbody .newsnav {
+	direction: rtl !important;
+	position: relative;
+	width: 100%;
+}
+#dvMainContents {
+	float: left !important;
+	direction: ltr !important;
+}
+#dvNews {
+	float: right !important;
+}
+#sidebar {
+	float: left !important;
+	padding: 0 0 0 15px !important;
+}
+.dvMenus {
+	text-align: left !important;
+}
+#footer {
+	background: #98AAC4 url(bg_footer_en.png) no-repeat !important;
+	text-align: right !important;
+}
+#footer p {
+	padding: 0 35px !important;
+}
+.skinContexMenu {
+	direction: ltr !important;
+}
+.vertical li a {
+	direction: ltr;
+	padding-left: 33px !important;
+	padding-right: 3px !important;
+}
+.vertical li ul {
+	left: 165px !important;
+}

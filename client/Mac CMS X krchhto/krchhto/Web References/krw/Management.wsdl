@@ -1,0 +1,2939 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SpecRightClickGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SpecRightClickGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SpecRightClickGetResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SpecRightClickSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="rightclick" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SpecRightClickSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SpecRightClickSetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ScrollTextGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ScrollTextGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ScrollTextGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ScrollTextChange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="val" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ScrollTextChangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ScrollTextChangeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogoUpload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="logo" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogoUploadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LogoUploadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogoDownload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogoDownloadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LogoDownloadResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WebsiteTitlesGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WebsiteTitlesGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WebsiteTitlesGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WebsiteTitlesChange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="val" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WebsiteTitlesChangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WebsiteTitlesChangeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GoogleAll">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GoogleAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GoogleAllResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GoogleAdd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mailbox" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GoogleAddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GoogleAddResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GoogleEdit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mailbox" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newMailbox" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GoogleEditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GoogleEditResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GoogleErase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mailbox" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GoogleEraseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GoogleEraseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LayoutWrite">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="layout" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LayoutWriteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LayoutWriteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MasterSetLegal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oldLegal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newLegal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MasterSetLegalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MasterSetLegalResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MasterSetDaysLeft">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="count" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MasterSetDaysLeftResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MasterSetDaysLeftResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MasterFileUpload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="buffer" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MasterFileUploadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MasterFileUploadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MasterFileDownload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MasterFileDownloadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MasterFileDownloadResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MasterFileDownloadIsFound">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MasterFileDownloadIsFoundResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MasterFileDownloadIsFoundResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdminPwSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pw" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="npw" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdminPwSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AdminPwSetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdminPwGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdminPwGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AdminPwGetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CleanAndRepair">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CleanAndRepairResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CleanAndRepairResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PreferencesGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PreferencesGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PreferencesGetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PreferencesSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="val" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PreferencesSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PreferencesSetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NodesAllTrees">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NodesAllTreesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NodesAllTreesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NodesAll">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NodesAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NodesAllResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NodesAdd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="node" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parent" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fullPath" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="zIndex" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NodesAddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NodesAddResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NodesEdit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="node" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newNode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fullPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newFullPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NodesEditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NodesEditResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NodesErase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fullPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parentPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NodesEraseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NodesEraseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NodesChangeIndex">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fullPath" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="newIndex" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="besidePath" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="oldIndex" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NodesChangeIndexResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NodesChangeIndexResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServerPageGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fullPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServerPageGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServerPageGetResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServerPageSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fullPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zipContents" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="buffer" type="tns:ArrayOfBase64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="ext" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="ph" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBase64Binary">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="base64Binary" nillable="true" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ServerPageSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServerPageSetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GalleryCatchChanges">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="target" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="buffer" type="tns:ArrayOfBase64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="ext" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="erasedList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GalleryCatchChangesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GalleryCatchChangesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GalleryImagesList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="target" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GalleryImagesListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GalleryImagesListResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GalleryImagesData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="target" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GalleryImagesDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GalleryImagesDataResult" type="tns:ArrayOfBase64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ContactList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ContactListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ContactListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ContactListCatchChanges">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dtList">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ContactListCatchChangesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ContactListCatchChangesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewsAll">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewsAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NewsAllResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewsAdd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zipContents" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="buffer" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="ext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewsAddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NewsAddResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewsSetArchive">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="wh" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewsSetArchiveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NewsSetArchiveResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewsErase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="wh" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewsEraseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NewsEraseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewsEditGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="wh" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewsEditGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NewsEditGetResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewsEditGetImageName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="wh" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewsEditGetImageNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NewsEditGetImageNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewsEditSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="wh" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="zipContents" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="imageMode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="buffer" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="ext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewsEditSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NewsEditSetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GalleryDefAllTables">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GalleryDefAllTablesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GalleryDefAllTablesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GalleryDefAll">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GalleryDefAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GalleryDefAllResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GalleryDefAdd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GalleryDefAddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GalleryDefAddResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GalleryDefEdit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GalleryDefEditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GalleryDefEditResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GalleryDefErase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GalleryDefEraseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GalleryDefEraseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FileUpload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="buffer" type="tns:ArrayOfBase64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="files" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FileUploadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FileUploadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FileDownload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="files" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FileDownloadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FileDownloadResult" type="tns:ArrayOfBase64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FileIsFoundOnServer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FileIsFoundOnServerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FileIsFoundOnServerResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FileRename">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newFileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FileRenameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FileRenameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FileErase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="files" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FileEraseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FileEraseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FilesListServer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FilesListServerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FilesListServerResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ReportsPagesViewCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportsPagesViewCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReportsPagesViewCountResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportsGalleriesViewCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportsGalleriesViewCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReportsGalleriesViewCountResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FLVUpload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="buffer" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="file" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FLVUploadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FLVUploadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalendarAll">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalendarAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CalendarAllResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalendarAdd">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="month" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="day" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="body" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalendarAddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CalendarAddResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalendarGetBody">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalendarGetBodyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CalendarGetBodyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalendarEdit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="month" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="day" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newTitle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="body" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalendarEditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CalendarEditResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalendarErase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tbl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalendarEraseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CalendarEraseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WatermarkStatusGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WatermarkStatusGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WatermarkStatusGetResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WatermarkStatusSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="watermark" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="legal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WatermarkStatusSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WatermarkStatusSetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SpecRightClickGetSoapIn">
+    <wsdl:part name="parameters" element="tns:SpecRightClickGet" />
+  </wsdl:message>
+  <wsdl:message name="SpecRightClickGetSoapOut">
+    <wsdl:part name="parameters" element="tns:SpecRightClickGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="SpecRightClickSetSoapIn">
+    <wsdl:part name="parameters" element="tns:SpecRightClickSet" />
+  </wsdl:message>
+  <wsdl:message name="SpecRightClickSetSoapOut">
+    <wsdl:part name="parameters" element="tns:SpecRightClickSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ScrollTextGetSoapIn">
+    <wsdl:part name="parameters" element="tns:ScrollTextGet" />
+  </wsdl:message>
+  <wsdl:message name="ScrollTextGetSoapOut">
+    <wsdl:part name="parameters" element="tns:ScrollTextGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ScrollTextChangeSoapIn">
+    <wsdl:part name="parameters" element="tns:ScrollTextChange" />
+  </wsdl:message>
+  <wsdl:message name="ScrollTextChangeSoapOut">
+    <wsdl:part name="parameters" element="tns:ScrollTextChangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogoUploadSoapIn">
+    <wsdl:part name="parameters" element="tns:LogoUpload" />
+  </wsdl:message>
+  <wsdl:message name="LogoUploadSoapOut">
+    <wsdl:part name="parameters" element="tns:LogoUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogoDownloadSoapIn">
+    <wsdl:part name="parameters" element="tns:LogoDownload" />
+  </wsdl:message>
+  <wsdl:message name="LogoDownloadSoapOut">
+    <wsdl:part name="parameters" element="tns:LogoDownloadResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebsiteTitlesGetSoapIn">
+    <wsdl:part name="parameters" element="tns:WebsiteTitlesGet" />
+  </wsdl:message>
+  <wsdl:message name="WebsiteTitlesGetSoapOut">
+    <wsdl:part name="parameters" element="tns:WebsiteTitlesGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="WebsiteTitlesChangeSoapIn">
+    <wsdl:part name="parameters" element="tns:WebsiteTitlesChange" />
+  </wsdl:message>
+  <wsdl:message name="WebsiteTitlesChangeSoapOut">
+    <wsdl:part name="parameters" element="tns:WebsiteTitlesChangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GoogleAllSoapIn">
+    <wsdl:part name="parameters" element="tns:GoogleAll" />
+  </wsdl:message>
+  <wsdl:message name="GoogleAllSoapOut">
+    <wsdl:part name="parameters" element="tns:GoogleAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="GoogleAddSoapIn">
+    <wsdl:part name="parameters" element="tns:GoogleAdd" />
+  </wsdl:message>
+  <wsdl:message name="GoogleAddSoapOut">
+    <wsdl:part name="parameters" element="tns:GoogleAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="GoogleEditSoapIn">
+    <wsdl:part name="parameters" element="tns:GoogleEdit" />
+  </wsdl:message>
+  <wsdl:message name="GoogleEditSoapOut">
+    <wsdl:part name="parameters" element="tns:GoogleEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="GoogleEraseSoapIn">
+    <wsdl:part name="parameters" element="tns:GoogleErase" />
+  </wsdl:message>
+  <wsdl:message name="GoogleEraseSoapOut">
+    <wsdl:part name="parameters" element="tns:GoogleEraseResponse" />
+  </wsdl:message>
+  <wsdl:message name="LayoutWriteSoapIn">
+    <wsdl:part name="parameters" element="tns:LayoutWrite" />
+  </wsdl:message>
+  <wsdl:message name="LayoutWriteSoapOut">
+    <wsdl:part name="parameters" element="tns:LayoutWriteResponse" />
+  </wsdl:message>
+  <wsdl:message name="MasterSetLegalSoapIn">
+    <wsdl:part name="parameters" element="tns:MasterSetLegal" />
+  </wsdl:message>
+  <wsdl:message name="MasterSetLegalSoapOut">
+    <wsdl:part name="parameters" element="tns:MasterSetLegalResponse" />
+  </wsdl:message>
+  <wsdl:message name="MasterSetDaysLeftSoapIn">
+    <wsdl:part name="parameters" element="tns:MasterSetDaysLeft" />
+  </wsdl:message>
+  <wsdl:message name="MasterSetDaysLeftSoapOut">
+    <wsdl:part name="parameters" element="tns:MasterSetDaysLeftResponse" />
+  </wsdl:message>
+  <wsdl:message name="MasterFileUploadSoapIn">
+    <wsdl:part name="parameters" element="tns:MasterFileUpload" />
+  </wsdl:message>
+  <wsdl:message name="MasterFileUploadSoapOut">
+    <wsdl:part name="parameters" element="tns:MasterFileUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="MasterFileDownloadSoapIn">
+    <wsdl:part name="parameters" element="tns:MasterFileDownload" />
+  </wsdl:message>
+  <wsdl:message name="MasterFileDownloadSoapOut">
+    <wsdl:part name="parameters" element="tns:MasterFileDownloadResponse" />
+  </wsdl:message>
+  <wsdl:message name="MasterFileDownloadIsFoundSoapIn">
+    <wsdl:part name="parameters" element="tns:MasterFileDownloadIsFound" />
+  </wsdl:message>
+  <wsdl:message name="MasterFileDownloadIsFoundSoapOut">
+    <wsdl:part name="parameters" element="tns:MasterFileDownloadIsFoundResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminPwSetSoapIn">
+    <wsdl:part name="parameters" element="tns:AdminPwSet" />
+  </wsdl:message>
+  <wsdl:message name="AdminPwSetSoapOut">
+    <wsdl:part name="parameters" element="tns:AdminPwSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminPwGetSoapIn">
+    <wsdl:part name="parameters" element="tns:AdminPwGet" />
+  </wsdl:message>
+  <wsdl:message name="AdminPwGetSoapOut">
+    <wsdl:part name="parameters" element="tns:AdminPwGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="CleanAndRepairSoapIn">
+    <wsdl:part name="parameters" element="tns:CleanAndRepair" />
+  </wsdl:message>
+  <wsdl:message name="CleanAndRepairSoapOut">
+    <wsdl:part name="parameters" element="tns:CleanAndRepairResponse" />
+  </wsdl:message>
+  <wsdl:message name="PreferencesGetSoapIn">
+    <wsdl:part name="parameters" element="tns:PreferencesGet" />
+  </wsdl:message>
+  <wsdl:message name="PreferencesGetSoapOut">
+    <wsdl:part name="parameters" element="tns:PreferencesGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="PreferencesSetSoapIn">
+    <wsdl:part name="parameters" element="tns:PreferencesSet" />
+  </wsdl:message>
+  <wsdl:message name="PreferencesSetSoapOut">
+    <wsdl:part name="parameters" element="tns:PreferencesSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="NodesAllTreesSoapIn">
+    <wsdl:part name="parameters" element="tns:NodesAllTrees" />
+  </wsdl:message>
+  <wsdl:message name="NodesAllTreesSoapOut">
+    <wsdl:part name="parameters" element="tns:NodesAllTreesResponse" />
+  </wsdl:message>
+  <wsdl:message name="NodesAllSoapIn">
+    <wsdl:part name="parameters" element="tns:NodesAll" />
+  </wsdl:message>
+  <wsdl:message name="NodesAllSoapOut">
+    <wsdl:part name="parameters" element="tns:NodesAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="NodesAddSoapIn">
+    <wsdl:part name="parameters" element="tns:NodesAdd" />
+  </wsdl:message>
+  <wsdl:message name="NodesAddSoapOut">
+    <wsdl:part name="parameters" element="tns:NodesAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="NodesEditSoapIn">
+    <wsdl:part name="parameters" element="tns:NodesEdit" />
+  </wsdl:message>
+  <wsdl:message name="NodesEditSoapOut">
+    <wsdl:part name="parameters" element="tns:NodesEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="NodesEraseSoapIn">
+    <wsdl:part name="parameters" element="tns:NodesErase" />
+  </wsdl:message>
+  <wsdl:message name="NodesEraseSoapOut">
+    <wsdl:part name="parameters" element="tns:NodesEraseResponse" />
+  </wsdl:message>
+  <wsdl:message name="NodesChangeIndexSoapIn">
+    <wsdl:part name="parameters" element="tns:NodesChangeIndex" />
+  </wsdl:message>
+  <wsdl:message name="NodesChangeIndexSoapOut">
+    <wsdl:part name="parameters" element="tns:NodesChangeIndexResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServerPageGetSoapIn">
+    <wsdl:part name="parameters" element="tns:ServerPageGet" />
+  </wsdl:message>
+  <wsdl:message name="ServerPageGetSoapOut">
+    <wsdl:part name="parameters" element="tns:ServerPageGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServerPageSetSoapIn">
+    <wsdl:part name="parameters" element="tns:ServerPageSet" />
+  </wsdl:message>
+  <wsdl:message name="ServerPageSetSoapOut">
+    <wsdl:part name="parameters" element="tns:ServerPageSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="GalleryCatchChangesSoapIn">
+    <wsdl:part name="parameters" element="tns:GalleryCatchChanges" />
+  </wsdl:message>
+  <wsdl:message name="GalleryCatchChangesSoapOut">
+    <wsdl:part name="parameters" element="tns:GalleryCatchChangesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GalleryImagesListSoapIn">
+    <wsdl:part name="parameters" element="tns:GalleryImagesList" />
+  </wsdl:message>
+  <wsdl:message name="GalleryImagesListSoapOut">
+    <wsdl:part name="parameters" element="tns:GalleryImagesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GalleryImagesDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GalleryImagesData" />
+  </wsdl:message>
+  <wsdl:message name="GalleryImagesDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GalleryImagesDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ContactListSoapIn">
+    <wsdl:part name="parameters" element="tns:ContactList" />
+  </wsdl:message>
+  <wsdl:message name="ContactListSoapOut">
+    <wsdl:part name="parameters" element="tns:ContactListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ContactListCatchChangesSoapIn">
+    <wsdl:part name="parameters" element="tns:ContactListCatchChanges" />
+  </wsdl:message>
+  <wsdl:message name="ContactListCatchChangesSoapOut">
+    <wsdl:part name="parameters" element="tns:ContactListCatchChangesResponse" />
+  </wsdl:message>
+  <wsdl:message name="NewsAllSoapIn">
+    <wsdl:part name="parameters" element="tns:NewsAll" />
+  </wsdl:message>
+  <wsdl:message name="NewsAllSoapOut">
+    <wsdl:part name="parameters" element="tns:NewsAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="NewsAddSoapIn">
+    <wsdl:part name="parameters" element="tns:NewsAdd" />
+  </wsdl:message>
+  <wsdl:message name="NewsAddSoapOut">
+    <wsdl:part name="parameters" element="tns:NewsAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="NewsSetArchiveSoapIn">
+    <wsdl:part name="parameters" element="tns:NewsSetArchive" />
+  </wsdl:message>
+  <wsdl:message name="NewsSetArchiveSoapOut">
+    <wsdl:part name="parameters" element="tns:NewsSetArchiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="NewsEraseSoapIn">
+    <wsdl:part name="parameters" element="tns:NewsErase" />
+  </wsdl:message>
+  <wsdl:message name="NewsEraseSoapOut">
+    <wsdl:part name="parameters" element="tns:NewsEraseResponse" />
+  </wsdl:message>
+  <wsdl:message name="NewsEditGetSoapIn">
+    <wsdl:part name="parameters" element="tns:NewsEditGet" />
+  </wsdl:message>
+  <wsdl:message name="NewsEditGetSoapOut">
+    <wsdl:part name="parameters" element="tns:NewsEditGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="NewsEditGetImageNameSoapIn">
+    <wsdl:part name="parameters" element="tns:NewsEditGetImageName" />
+  </wsdl:message>
+  <wsdl:message name="NewsEditGetImageNameSoapOut">
+    <wsdl:part name="parameters" element="tns:NewsEditGetImageNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="NewsEditSetSoapIn">
+    <wsdl:part name="parameters" element="tns:NewsEditSet" />
+  </wsdl:message>
+  <wsdl:message name="NewsEditSetSoapOut">
+    <wsdl:part name="parameters" element="tns:NewsEditSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="GalleryDefAllTablesSoapIn">
+    <wsdl:part name="parameters" element="tns:GalleryDefAllTables" />
+  </wsdl:message>
+  <wsdl:message name="GalleryDefAllTablesSoapOut">
+    <wsdl:part name="parameters" element="tns:GalleryDefAllTablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GalleryDefAllSoapIn">
+    <wsdl:part name="parameters" element="tns:GalleryDefAll" />
+  </wsdl:message>
+  <wsdl:message name="GalleryDefAllSoapOut">
+    <wsdl:part name="parameters" element="tns:GalleryDefAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="GalleryDefAddSoapIn">
+    <wsdl:part name="parameters" element="tns:GalleryDefAdd" />
+  </wsdl:message>
+  <wsdl:message name="GalleryDefAddSoapOut">
+    <wsdl:part name="parameters" element="tns:GalleryDefAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="GalleryDefEditSoapIn">
+    <wsdl:part name="parameters" element="tns:GalleryDefEdit" />
+  </wsdl:message>
+  <wsdl:message name="GalleryDefEditSoapOut">
+    <wsdl:part name="parameters" element="tns:GalleryDefEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="GalleryDefEraseSoapIn">
+    <wsdl:part name="parameters" element="tns:GalleryDefErase" />
+  </wsdl:message>
+  <wsdl:message name="GalleryDefEraseSoapOut">
+    <wsdl:part name="parameters" element="tns:GalleryDefEraseResponse" />
+  </wsdl:message>
+  <wsdl:message name="FileUploadSoapIn">
+    <wsdl:part name="parameters" element="tns:FileUpload" />
+  </wsdl:message>
+  <wsdl:message name="FileUploadSoapOut">
+    <wsdl:part name="parameters" element="tns:FileUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="FileDownloadSoapIn">
+    <wsdl:part name="parameters" element="tns:FileDownload" />
+  </wsdl:message>
+  <wsdl:message name="FileDownloadSoapOut">
+    <wsdl:part name="parameters" element="tns:FileDownloadResponse" />
+  </wsdl:message>
+  <wsdl:message name="FileIsFoundOnServerSoapIn">
+    <wsdl:part name="parameters" element="tns:FileIsFoundOnServer" />
+  </wsdl:message>
+  <wsdl:message name="FileIsFoundOnServerSoapOut">
+    <wsdl:part name="parameters" element="tns:FileIsFoundOnServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="FileRenameSoapIn">
+    <wsdl:part name="parameters" element="tns:FileRename" />
+  </wsdl:message>
+  <wsdl:message name="FileRenameSoapOut">
+    <wsdl:part name="parameters" element="tns:FileRenameResponse" />
+  </wsdl:message>
+  <wsdl:message name="FileEraseSoapIn">
+    <wsdl:part name="parameters" element="tns:FileErase" />
+  </wsdl:message>
+  <wsdl:message name="FileEraseSoapOut">
+    <wsdl:part name="parameters" element="tns:FileEraseResponse" />
+  </wsdl:message>
+  <wsdl:message name="FilesListServerSoapIn">
+    <wsdl:part name="parameters" element="tns:FilesListServer" />
+  </wsdl:message>
+  <wsdl:message name="FilesListServerSoapOut">
+    <wsdl:part name="parameters" element="tns:FilesListServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReportsPagesViewCountSoapIn">
+    <wsdl:part name="parameters" element="tns:ReportsPagesViewCount" />
+  </wsdl:message>
+  <wsdl:message name="ReportsPagesViewCountSoapOut">
+    <wsdl:part name="parameters" element="tns:ReportsPagesViewCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReportsGalleriesViewCountSoapIn">
+    <wsdl:part name="parameters" element="tns:ReportsGalleriesViewCount" />
+  </wsdl:message>
+  <wsdl:message name="ReportsGalleriesViewCountSoapOut">
+    <wsdl:part name="parameters" element="tns:ReportsGalleriesViewCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="FLVUploadSoapIn">
+    <wsdl:part name="parameters" element="tns:FLVUpload" />
+  </wsdl:message>
+  <wsdl:message name="FLVUploadSoapOut">
+    <wsdl:part name="parameters" element="tns:FLVUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalendarAllSoapIn">
+    <wsdl:part name="parameters" element="tns:CalendarAll" />
+  </wsdl:message>
+  <wsdl:message name="CalendarAllSoapOut">
+    <wsdl:part name="parameters" element="tns:CalendarAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalendarAddSoapIn">
+    <wsdl:part name="parameters" element="tns:CalendarAdd" />
+  </wsdl:message>
+  <wsdl:message name="CalendarAddSoapOut">
+    <wsdl:part name="parameters" element="tns:CalendarAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalendarGetBodySoapIn">
+    <wsdl:part name="parameters" element="tns:CalendarGetBody" />
+  </wsdl:message>
+  <wsdl:message name="CalendarGetBodySoapOut">
+    <wsdl:part name="parameters" element="tns:CalendarGetBodyResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalendarEditSoapIn">
+    <wsdl:part name="parameters" element="tns:CalendarEdit" />
+  </wsdl:message>
+  <wsdl:message name="CalendarEditSoapOut">
+    <wsdl:part name="parameters" element="tns:CalendarEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalendarEraseSoapIn">
+    <wsdl:part name="parameters" element="tns:CalendarErase" />
+  </wsdl:message>
+  <wsdl:message name="CalendarEraseSoapOut">
+    <wsdl:part name="parameters" element="tns:CalendarEraseResponse" />
+  </wsdl:message>
+  <wsdl:message name="WatermarkStatusGetSoapIn">
+    <wsdl:part name="parameters" element="tns:WatermarkStatusGet" />
+  </wsdl:message>
+  <wsdl:message name="WatermarkStatusGetSoapOut">
+    <wsdl:part name="parameters" element="tns:WatermarkStatusGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="WatermarkStatusSetSoapIn">
+    <wsdl:part name="parameters" element="tns:WatermarkStatusSet" />
+  </wsdl:message>
+  <wsdl:message name="WatermarkStatusSetSoapOut">
+    <wsdl:part name="parameters" element="tns:WatermarkStatusSetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ManagementSoap">
+    <wsdl:operation name="SpecRightClickGet">
+      <wsdl:input message="tns:SpecRightClickGetSoapIn" />
+      <wsdl:output message="tns:SpecRightClickGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SpecRightClickSet">
+      <wsdl:input message="tns:SpecRightClickSetSoapIn" />
+      <wsdl:output message="tns:SpecRightClickSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ScrollTextGet">
+      <wsdl:input message="tns:ScrollTextGetSoapIn" />
+      <wsdl:output message="tns:ScrollTextGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ScrollTextChange">
+      <wsdl:input message="tns:ScrollTextChangeSoapIn" />
+      <wsdl:output message="tns:ScrollTextChangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogoUpload">
+      <wsdl:input message="tns:LogoUploadSoapIn" />
+      <wsdl:output message="tns:LogoUploadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogoDownload">
+      <wsdl:input message="tns:LogoDownloadSoapIn" />
+      <wsdl:output message="tns:LogoDownloadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WebsiteTitlesGet">
+      <wsdl:input message="tns:WebsiteTitlesGetSoapIn" />
+      <wsdl:output message="tns:WebsiteTitlesGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WebsiteTitlesChange">
+      <wsdl:input message="tns:WebsiteTitlesChangeSoapIn" />
+      <wsdl:output message="tns:WebsiteTitlesChangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GoogleAll">
+      <wsdl:input message="tns:GoogleAllSoapIn" />
+      <wsdl:output message="tns:GoogleAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GoogleAdd">
+      <wsdl:input message="tns:GoogleAddSoapIn" />
+      <wsdl:output message="tns:GoogleAddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GoogleEdit">
+      <wsdl:input message="tns:GoogleEditSoapIn" />
+      <wsdl:output message="tns:GoogleEditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GoogleErase">
+      <wsdl:input message="tns:GoogleEraseSoapIn" />
+      <wsdl:output message="tns:GoogleEraseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LayoutWrite">
+      <wsdl:input message="tns:LayoutWriteSoapIn" />
+      <wsdl:output message="tns:LayoutWriteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MasterSetLegal">
+      <wsdl:input message="tns:MasterSetLegalSoapIn" />
+      <wsdl:output message="tns:MasterSetLegalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MasterSetDaysLeft">
+      <wsdl:input message="tns:MasterSetDaysLeftSoapIn" />
+      <wsdl:output message="tns:MasterSetDaysLeftSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MasterFileUpload">
+      <wsdl:input message="tns:MasterFileUploadSoapIn" />
+      <wsdl:output message="tns:MasterFileUploadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MasterFileDownload">
+      <wsdl:input message="tns:MasterFileDownloadSoapIn" />
+      <wsdl:output message="tns:MasterFileDownloadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MasterFileDownloadIsFound">
+      <wsdl:input message="tns:MasterFileDownloadIsFoundSoapIn" />
+      <wsdl:output message="tns:MasterFileDownloadIsFoundSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AdminPwSet">
+      <wsdl:input message="tns:AdminPwSetSoapIn" />
+      <wsdl:output message="tns:AdminPwSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AdminPwGet">
+      <wsdl:input message="tns:AdminPwGetSoapIn" />
+      <wsdl:output message="tns:AdminPwGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CleanAndRepair">
+      <wsdl:input message="tns:CleanAndRepairSoapIn" />
+      <wsdl:output message="tns:CleanAndRepairSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PreferencesGet">
+      <wsdl:input message="tns:PreferencesGetSoapIn" />
+      <wsdl:output message="tns:PreferencesGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PreferencesSet">
+      <wsdl:input message="tns:PreferencesSetSoapIn" />
+      <wsdl:output message="tns:PreferencesSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NodesAllTrees">
+      <wsdl:input message="tns:NodesAllTreesSoapIn" />
+      <wsdl:output message="tns:NodesAllTreesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NodesAll">
+      <wsdl:input message="tns:NodesAllSoapIn" />
+      <wsdl:output message="tns:NodesAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NodesAdd">
+      <wsdl:input message="tns:NodesAddSoapIn" />
+      <wsdl:output message="tns:NodesAddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NodesEdit">
+      <wsdl:input message="tns:NodesEditSoapIn" />
+      <wsdl:output message="tns:NodesEditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NodesErase">
+      <wsdl:input message="tns:NodesEraseSoapIn" />
+      <wsdl:output message="tns:NodesEraseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NodesChangeIndex">
+      <wsdl:input message="tns:NodesChangeIndexSoapIn" />
+      <wsdl:output message="tns:NodesChangeIndexSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServerPageGet">
+      <wsdl:input message="tns:ServerPageGetSoapIn" />
+      <wsdl:output message="tns:ServerPageGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServerPageSet">
+      <wsdl:input message="tns:ServerPageSetSoapIn" />
+      <wsdl:output message="tns:ServerPageSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GalleryCatchChanges">
+      <wsdl:input message="tns:GalleryCatchChangesSoapIn" />
+      <wsdl:output message="tns:GalleryCatchChangesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GalleryImagesList">
+      <wsdl:input message="tns:GalleryImagesListSoapIn" />
+      <wsdl:output message="tns:GalleryImagesListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GalleryImagesData">
+      <wsdl:input message="tns:GalleryImagesDataSoapIn" />
+      <wsdl:output message="tns:GalleryImagesDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ContactList">
+      <wsdl:input message="tns:ContactListSoapIn" />
+      <wsdl:output message="tns:ContactListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ContactListCatchChanges">
+      <wsdl:input message="tns:ContactListCatchChangesSoapIn" />
+      <wsdl:output message="tns:ContactListCatchChangesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NewsAll">
+      <wsdl:input message="tns:NewsAllSoapIn" />
+      <wsdl:output message="tns:NewsAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NewsAdd">
+      <wsdl:input message="tns:NewsAddSoapIn" />
+      <wsdl:output message="tns:NewsAddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NewsSetArchive">
+      <wsdl:input message="tns:NewsSetArchiveSoapIn" />
+      <wsdl:output message="tns:NewsSetArchiveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NewsErase">
+      <wsdl:input message="tns:NewsEraseSoapIn" />
+      <wsdl:output message="tns:NewsEraseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NewsEditGet">
+      <wsdl:input message="tns:NewsEditGetSoapIn" />
+      <wsdl:output message="tns:NewsEditGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NewsEditGetImageName">
+      <wsdl:input message="tns:NewsEditGetImageNameSoapIn" />
+      <wsdl:output message="tns:NewsEditGetImageNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NewsEditSet">
+      <wsdl:input message="tns:NewsEditSetSoapIn" />
+      <wsdl:output message="tns:NewsEditSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GalleryDefAllTables">
+      <wsdl:input message="tns:GalleryDefAllTablesSoapIn" />
+      <wsdl:output message="tns:GalleryDefAllTablesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GalleryDefAll">
+      <wsdl:input message="tns:GalleryDefAllSoapIn" />
+      <wsdl:output message="tns:GalleryDefAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GalleryDefAdd">
+      <wsdl:input message="tns:GalleryDefAddSoapIn" />
+      <wsdl:output message="tns:GalleryDefAddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GalleryDefEdit">
+      <wsdl:input message="tns:GalleryDefEditSoapIn" />
+      <wsdl:output message="tns:GalleryDefEditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GalleryDefErase">
+      <wsdl:input message="tns:GalleryDefEraseSoapIn" />
+      <wsdl:output message="tns:GalleryDefEraseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FileUpload">
+      <wsdl:input message="tns:FileUploadSoapIn" />
+      <wsdl:output message="tns:FileUploadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FileDownload">
+      <wsdl:input message="tns:FileDownloadSoapIn" />
+      <wsdl:output message="tns:FileDownloadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FileIsFoundOnServer">
+      <wsdl:input message="tns:FileIsFoundOnServerSoapIn" />
+      <wsdl:output message="tns:FileIsFoundOnServerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FileRename">
+      <wsdl:input message="tns:FileRenameSoapIn" />
+      <wsdl:output message="tns:FileRenameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FileErase">
+      <wsdl:input message="tns:FileEraseSoapIn" />
+      <wsdl:output message="tns:FileEraseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FilesListServer">
+      <wsdl:input message="tns:FilesListServerSoapIn" />
+      <wsdl:output message="tns:FilesListServerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportsPagesViewCount">
+      <wsdl:input message="tns:ReportsPagesViewCountSoapIn" />
+      <wsdl:output message="tns:ReportsPagesViewCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportsGalleriesViewCount">
+      <wsdl:input message="tns:ReportsGalleriesViewCountSoapIn" />
+      <wsdl:output message="tns:ReportsGalleriesViewCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FLVUpload">
+      <wsdl:input message="tns:FLVUploadSoapIn" />
+      <wsdl:output message="tns:FLVUploadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalendarAll">
+      <wsdl:input message="tns:CalendarAllSoapIn" />
+      <wsdl:output message="tns:CalendarAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalendarAdd">
+      <wsdl:input message="tns:CalendarAddSoapIn" />
+      <wsdl:output message="tns:CalendarAddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalendarGetBody">
+      <wsdl:input message="tns:CalendarGetBodySoapIn" />
+      <wsdl:output message="tns:CalendarGetBodySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalendarEdit">
+      <wsdl:input message="tns:CalendarEditSoapIn" />
+      <wsdl:output message="tns:CalendarEditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalendarErase">
+      <wsdl:input message="tns:CalendarEraseSoapIn" />
+      <wsdl:output message="tns:CalendarEraseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WatermarkStatusGet">
+      <wsdl:input message="tns:WatermarkStatusGetSoapIn" />
+      <wsdl:output message="tns:WatermarkStatusGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WatermarkStatusSet">
+      <wsdl:input message="tns:WatermarkStatusSetSoapIn" />
+      <wsdl:output message="tns:WatermarkStatusSetSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ManagementSoap" type="tns:ManagementSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SpecRightClickGet">
+      <soap:operation soapAction="http://tempuri.org/SpecRightClickGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SpecRightClickSet">
+      <soap:operation soapAction="http://tempuri.org/SpecRightClickSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ScrollTextGet">
+      <soap:operation soapAction="http://tempuri.org/ScrollTextGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ScrollTextChange">
+      <soap:operation soapAction="http://tempuri.org/ScrollTextChange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogoUpload">
+      <soap:operation soapAction="http://tempuri.org/LogoUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogoDownload">
+      <soap:operation soapAction="http://tempuri.org/LogoDownload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebsiteTitlesGet">
+      <soap:operation soapAction="http://tempuri.org/WebsiteTitlesGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebsiteTitlesChange">
+      <soap:operation soapAction="http://tempuri.org/WebsiteTitlesChange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GoogleAll">
+      <soap:operation soapAction="http://tempuri.org/GoogleAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GoogleAdd">
+      <soap:operation soapAction="http://tempuri.org/GoogleAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GoogleEdit">
+      <soap:operation soapAction="http://tempuri.org/GoogleEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GoogleErase">
+      <soap:operation soapAction="http://tempuri.org/GoogleErase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayoutWrite">
+      <soap:operation soapAction="http://tempuri.org/LayoutWrite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MasterSetLegal">
+      <soap:operation soapAction="http://tempuri.org/MasterSetLegal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MasterSetDaysLeft">
+      <soap:operation soapAction="http://tempuri.org/MasterSetDaysLeft" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MasterFileUpload">
+      <soap:operation soapAction="http://tempuri.org/MasterFileUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MasterFileDownload">
+      <soap:operation soapAction="http://tempuri.org/MasterFileDownload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MasterFileDownloadIsFound">
+      <soap:operation soapAction="http://tempuri.org/MasterFileDownloadIsFound" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdminPwSet">
+      <soap:operation soapAction="http://tempuri.org/AdminPwSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdminPwGet">
+      <soap:operation soapAction="http://tempuri.org/AdminPwGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CleanAndRepair">
+      <soap:operation soapAction="http://tempuri.org/CleanAndRepair" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PreferencesGet">
+      <soap:operation soapAction="http://tempuri.org/PreferencesGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PreferencesSet">
+      <soap:operation soapAction="http://tempuri.org/PreferencesSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NodesAllTrees">
+      <soap:operation soapAction="http://tempuri.org/NodesAllTrees" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NodesAll">
+      <soap:operation soapAction="http://tempuri.org/NodesAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NodesAdd">
+      <soap:operation soapAction="http://tempuri.org/NodesAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NodesEdit">
+      <soap:operation soapAction="http://tempuri.org/NodesEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NodesErase">
+      <soap:operation soapAction="http://tempuri.org/NodesErase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NodesChangeIndex">
+      <soap:operation soapAction="http://tempuri.org/NodesChangeIndex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServerPageGet">
+      <soap:operation soapAction="http://tempuri.org/ServerPageGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServerPageSet">
+      <soap:operation soapAction="http://tempuri.org/ServerPageSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GalleryCatchChanges">
+      <soap:operation soapAction="http://tempuri.org/GalleryCatchChanges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GalleryImagesList">
+      <soap:operation soapAction="http://tempuri.org/GalleryImagesList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GalleryImagesData">
+      <soap:operation soapAction="http://tempuri.org/GalleryImagesData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContactList">
+      <soap:operation soapAction="http://tempuri.org/ContactList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContactListCatchChanges">
+      <soap:operation soapAction="http://tempuri.org/ContactListCatchChanges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewsAll">
+      <soap:operation soapAction="http://tempuri.org/NewsAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewsAdd">
+      <soap:operation soapAction="http://tempuri.org/NewsAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewsSetArchive">
+      <soap:operation soapAction="http://tempuri.org/NewsSetArchive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewsErase">
+      <soap:operation soapAction="http://tempuri.org/NewsErase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewsEditGet">
+      <soap:operation soapAction="http://tempuri.org/NewsEditGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewsEditGetImageName">
+      <soap:operation soapAction="http://tempuri.org/NewsEditGetImageName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewsEditSet">
+      <soap:operation soapAction="http://tempuri.org/NewsEditSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GalleryDefAllTables">
+      <soap:operation soapAction="http://tempuri.org/GalleryDefAllTables" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GalleryDefAll">
+      <soap:operation soapAction="http://tempuri.org/GalleryDefAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GalleryDefAdd">
+      <soap:operation soapAction="http://tempuri.org/GalleryDefAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GalleryDefEdit">
+      <soap:operation soapAction="http://tempuri.org/GalleryDefEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GalleryDefErase">
+      <soap:operation soapAction="http://tempuri.org/GalleryDefErase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileUpload">
+      <soap:operation soapAction="http://tempuri.org/FileUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileDownload">
+      <soap:operation soapAction="http://tempuri.org/FileDownload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileIsFoundOnServer">
+      <soap:operation soapAction="http://tempuri.org/FileIsFoundOnServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileRename">
+      <soap:operation soapAction="http://tempuri.org/FileRename" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileErase">
+      <soap:operation soapAction="http://tempuri.org/FileErase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FilesListServer">
+      <soap:operation soapAction="http://tempuri.org/FilesListServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportsPagesViewCount">
+      <soap:operation soapAction="http://tempuri.org/ReportsPagesViewCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportsGalleriesViewCount">
+      <soap:operation soapAction="http://tempuri.org/ReportsGalleriesViewCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FLVUpload">
+      <soap:operation soapAction="http://tempuri.org/FLVUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalendarAll">
+      <soap:operation soapAction="http://tempuri.org/CalendarAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalendarAdd">
+      <soap:operation soapAction="http://tempuri.org/CalendarAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalendarGetBody">
+      <soap:operation soapAction="http://tempuri.org/CalendarGetBody" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalendarEdit">
+      <soap:operation soapAction="http://tempuri.org/CalendarEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalendarErase">
+      <soap:operation soapAction="http://tempuri.org/CalendarErase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WatermarkStatusGet">
+      <soap:operation soapAction="http://tempuri.org/WatermarkStatusGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WatermarkStatusSet">
+      <soap:operation soapAction="http://tempuri.org/WatermarkStatusSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ManagementSoap12" type="tns:ManagementSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SpecRightClickGet">
+      <soap12:operation soapAction="http://tempuri.org/SpecRightClickGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SpecRightClickSet">
+      <soap12:operation soapAction="http://tempuri.org/SpecRightClickSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ScrollTextGet">
+      <soap12:operation soapAction="http://tempuri.org/ScrollTextGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ScrollTextChange">
+      <soap12:operation soapAction="http://tempuri.org/ScrollTextChange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogoUpload">
+      <soap12:operation soapAction="http://tempuri.org/LogoUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogoDownload">
+      <soap12:operation soapAction="http://tempuri.org/LogoDownload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebsiteTitlesGet">
+      <soap12:operation soapAction="http://tempuri.org/WebsiteTitlesGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebsiteTitlesChange">
+      <soap12:operation soapAction="http://tempuri.org/WebsiteTitlesChange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GoogleAll">
+      <soap12:operation soapAction="http://tempuri.org/GoogleAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GoogleAdd">
+      <soap12:operation soapAction="http://tempuri.org/GoogleAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GoogleEdit">
+      <soap12:operation soapAction="http://tempuri.org/GoogleEdit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GoogleErase">
+      <soap12:operation soapAction="http://tempuri.org/GoogleErase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LayoutWrite">
+      <soap12:operation soapAction="http://tempuri.org/LayoutWrite" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MasterSetLegal">
+      <soap12:operation soapAction="http://tempuri.org/MasterSetLegal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MasterSetDaysLeft">
+      <soap12:operation soapAction="http://tempuri.org/MasterSetDaysLeft" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MasterFileUpload">
+      <soap12:operation soapAction="http://tempuri.org/MasterFileUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MasterFileDownload">
+      <soap12:operation soapAction="http://tempuri.org/MasterFileDownload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MasterFileDownloadIsFound">
+      <soap12:operation soapAction="http://tempuri.org/MasterFileDownloadIsFound" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdminPwSet">
+      <soap12:operation soapAction="http://tempuri.org/AdminPwSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdminPwGet">
+      <soap12:operation soapAction="http://tempuri.org/AdminPwGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CleanAndRepair">
+      <soap12:operation soapAction="http://tempuri.org/CleanAndRepair" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PreferencesGet">
+      <soap12:operation soapAction="http://tempuri.org/PreferencesGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PreferencesSet">
+      <soap12:operation soapAction="http://tempuri.org/PreferencesSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NodesAllTrees">
+      <soap12:operation soapAction="http://tempuri.org/NodesAllTrees" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NodesAll">
+      <soap12:operation soapAction="http://tempuri.org/NodesAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NodesAdd">
+      <soap12:operation soapAction="http://tempuri.org/NodesAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NodesEdit">
+      <soap12:operation soapAction="http://tempuri.org/NodesEdit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NodesErase">
+      <soap12:operation soapAction="http://tempuri.org/NodesErase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NodesChangeIndex">
+      <soap12:operation soapAction="http://tempuri.org/NodesChangeIndex" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServerPageGet">
+      <soap12:operation soapAction="http://tempuri.org/ServerPageGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServerPageSet">
+      <soap12:operation soapAction="http://tempuri.org/ServerPageSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GalleryCatchChanges">
+      <soap12:operation soapAction="http://tempuri.org/GalleryCatchChanges" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GalleryImagesList">
+      <soap12:operation soapAction="http://tempuri.org/GalleryImagesList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GalleryImagesData">
+      <soap12:operation soapAction="http://tempuri.org/GalleryImagesData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContactList">
+      <soap12:operation soapAction="http://tempuri.org/ContactList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContactListCatchChanges">
+      <soap12:operation soapAction="http://tempuri.org/ContactListCatchChanges" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewsAll">
+      <soap12:operation soapAction="http://tempuri.org/NewsAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewsAdd">
+      <soap12:operation soapAction="http://tempuri.org/NewsAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewsSetArchive">
+      <soap12:operation soapAction="http://tempuri.org/NewsSetArchive" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewsErase">
+      <soap12:operation soapAction="http://tempuri.org/NewsErase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewsEditGet">
+      <soap12:operation soapAction="http://tempuri.org/NewsEditGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewsEditGetImageName">
+      <soap12:operation soapAction="http://tempuri.org/NewsEditGetImageName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewsEditSet">
+      <soap12:operation soapAction="http://tempuri.org/NewsEditSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GalleryDefAllTables">
+      <soap12:operation soapAction="http://tempuri.org/GalleryDefAllTables" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GalleryDefAll">
+      <soap12:operation soapAction="http://tempuri.org/GalleryDefAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GalleryDefAdd">
+      <soap12:operation soapAction="http://tempuri.org/GalleryDefAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GalleryDefEdit">
+      <soap12:operation soapAction="http://tempuri.org/GalleryDefEdit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GalleryDefErase">
+      <soap12:operation soapAction="http://tempuri.org/GalleryDefErase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileUpload">
+      <soap12:operation soapAction="http://tempuri.org/FileUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileDownload">
+      <soap12:operation soapAction="http://tempuri.org/FileDownload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileIsFoundOnServer">
+      <soap12:operation soapAction="http://tempuri.org/FileIsFoundOnServer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileRename">
+      <soap12:operation soapAction="http://tempuri.org/FileRename" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileErase">
+      <soap12:operation soapAction="http://tempuri.org/FileErase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FilesListServer">
+      <soap12:operation soapAction="http://tempuri.org/FilesListServer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportsPagesViewCount">
+      <soap12:operation soapAction="http://tempuri.org/ReportsPagesViewCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportsGalleriesViewCount">
+      <soap12:operation soapAction="http://tempuri.org/ReportsGalleriesViewCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FLVUpload">
+      <soap12:operation soapAction="http://tempuri.org/FLVUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalendarAll">
+      <soap12:operation soapAction="http://tempuri.org/CalendarAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalendarAdd">
+      <soap12:operation soapAction="http://tempuri.org/CalendarAdd" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalendarGetBody">
+      <soap12:operation soapAction="http://tempuri.org/CalendarGetBody" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalendarEdit">
+      <soap12:operation soapAction="http://tempuri.org/CalendarEdit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalendarErase">
+      <soap12:operation soapAction="http://tempuri.org/CalendarErase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WatermarkStatusGet">
+      <soap12:operation soapAction="http://tempuri.org/WatermarkStatusGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WatermarkStatusSet">
+      <soap12:operation soapAction="http://tempuri.org/WatermarkStatusSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Management">
+    <wsdl:port name="ManagementSoap" binding="tns:ManagementSoap">
+      <soap:address location="http://localhost:54029/krchhto/Management.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ManagementSoap12" binding="tns:ManagementSoap12">
+      <soap12:address location="http://localhost:54029/krchhto/Management.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,43 @@
+@charset "utf-8";
+/** {
+   	behavior: url(iepngfix.htc);
+}*/
+#dvNoScript {
+	width: 990px !important;
+	padding-top: 0 !important;
+	height: 213px;
+	background: #686868;
+}
+#dvLogo {
+	padding: 0 !important;
+}
+.dvMenusIEFix {
+	position: relative;
+}
+.vertical ul {
+	direction: ltr;
+}
+.vertical li a {
+	height: 1.5em !important;
+}
+.vertical.left ul ul ul,.vertical .left ul {
+	left: -195px !important;
+	top: 0 !important;
+}
+.blackwhite li a {
+	color: #000000 !important;
+}
+.blackwhite li a:hover {
+	text-decoration: none;
+	color: #EDF3FE !important;
+}
+#logo {
+	padding-top: 0 !important;
+}
+#content {
+	height: auto !important;
+	height: 800px;
+}
+.posts li .newsbody .newsnav {
+	margin-right: -45px;
+}

@@ -1,0 +1,20 @@
+@charset "utf-8";
+.dvNewsFromSearch .pic {
+	float: right !important;
+	margin-left: 19px !important;
+}
+
+.treeview li {
+	background: white url(smlist.gif) no-repeat left center !important;
+	padding-left: 22px !important;
+}
+
+.treeview li.submenu {
+	background: white url(smclosed.gif) no-repeat left 1px !important;
+}
+
+
+.dvNewsFromSearchDate {
+	direction: rtl !important;
+	padding: 0 5px 0 0 !important;
+}

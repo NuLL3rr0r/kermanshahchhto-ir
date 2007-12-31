@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "krchhto", "krchhto\krchhto.csproj", "{85498DB8-3751-4C46-AE2D-6A26314833BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "proxymode", "proxymode\proxymode.csproj", "{6028A261-BC88-49BB-B1EA-5BED1A19B109}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85498DB8-3751-4C46-AE2D-6A26314833BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85498DB8-3751-4C46-AE2D-6A26314833BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85498DB8-3751-4C46-AE2D-6A26314833BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85498DB8-3751-4C46-AE2D-6A26314833BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6028A261-BC88-49BB-B1EA-5BED1A19B109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6028A261-BC88-49BB-B1EA-5BED1A19B109}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6028A261-BC88-49BB-B1EA-5BED1A19B109}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6028A261-BC88-49BB-B1EA-5BED1A19B109}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

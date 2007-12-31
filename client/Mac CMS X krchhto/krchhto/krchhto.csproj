@@ -1,0 +1,573 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{85498DB8-3751-4C46-AE2D-6A26314833BE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>krchhto</RootNamespace>
+    <AssemblyName>krchhto</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Finder.ico</ApplicationIcon>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/krchhto/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="SkinSoft.OSSkin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=669afa176ca71378, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calendar.Designer.cs">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalendarAddEdit.Designer.cs">
+      <DependentUpon>CalendarAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileManager.Designer.cs">
+      <DependentUpon>FileManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reportsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\krw\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="z Classes\Base.cs" />
+    <Compile Include="z Classes\ExtractIcon.cs" />
+    <Compile Include="z Page Editor\ContactList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="z Page Editor\ContactList.Designer.cs">
+      <DependentUpon>ContactList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editor.designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="z Classes\EncDec.cs" />
+    <Compile Include="FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gallery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gallery.Designer.cs">
+      <DependentUpon>Gallery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui.Designer.cs">
+      <DependentUpon>gui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageEditor.Designer.cs">
+      <DependentUpon>ImageEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="z Page Editor\InsertFLV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="z Page Editor\InsertFLV.Designer.cs">
+      <DependentUpon>InsertFLV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="z Page Editor\LinkDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="z Page Editor\LinkDialog.designer.cs">
+      <DependentUpon>LinkDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="News.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="News.Designer.cs">
+      <DependentUpon>News.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TinyInputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TinyInputBox.Designer.cs">
+      <DependentUpon>TinyInputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="z Page Editor\PageEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="z Page Editor\PageEditor.Designer.cs">
+      <DependentUpon>PageEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="z Page Editor\PageManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="z Page Editor\PageManager.Designer.cs">
+      <DependentUpon>PageManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Preferences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preferences.Designer.cs">
+      <DependentUpon>Preferences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calendar.resx">
+      <DependentUpon>Calendar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalendarAddEdit.resx">
+      <DependentUpon>CalendarAddEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileManager.resx">
+      <DependentUpon>FileManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewCount.rdlc" />
+    <EmbeddedResource Include="ReportViewCountAr.rdlc" />
+    <EmbeddedResource Include="ReportViewCountEn.rdlc" />
+    <EmbeddedResource Include="ReportViewCountGalleries.rdlc" />
+    <EmbeddedResource Include="ReportViewCountGalleriesAr.rdlc" />
+    <EmbeddedResource Include="ReportViewCountGalleriesEn.rdlc" />
+    <EmbeddedResource Include="z Page Editor\ContactList.resx">
+      <DependentUpon>ContactList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor.resx">
+      <DependentUpon>Editor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gallery.resx">
+      <DependentUpon>Gallery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui.resx">
+      <DependentUpon>gui.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageEditor.resx">
+      <DependentUpon>ImageEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="z Page Editor\InsertFLV.resx">
+      <DependentUpon>InsertFLV.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="z Page Editor\LinkDialog.resx">
+      <DependentUpon>LinkDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="News.resx">
+      <DependentUpon>News.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="TinyInputBox.resx">
+      <DependentUpon>TinyInputBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="z Page Editor\PageEditor.resx">
+      <DependentUpon>PageEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="z Page Editor\PageManager.resx">
+      <DependentUpon>PageManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preferences.resx">
+      <DependentUpon>Preferences.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pw.resx">
+      <DependentUpon>Pw.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="z Page Editor\SearchDialog.resx">
+      <DependentUpon>SearchDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="z Page Editor\TextInsertForm.resx">
+      <DependentUpon>TextInsertForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="z Web Browser\BrowserControl.resx">
+      <DependentUpon>BrowserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="z Web Browser\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="z Web Browser\OpenUrlForm.resx">
+      <DependentUpon>OpenUrlForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="z Web Browser\OptionsForm.resx">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="z Web Browser\ScriptErrorWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ScriptErrorWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Pw.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pw.Designer.cs">
+      <DependentUpon>Pw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="z Page Editor\SearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="z Page Editor\SearchDialog.designer.cs">
+      <DependentUpon>SearchDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="z Page Editor\TextInsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="z Page Editor\TextInsertForm.designer.cs">
+      <DependentUpon>TextInsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="z Web Browser\BrowserCommands.cs" />
+    <Compile Include="z Web Browser\BrowserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="z Web Browser\BrowserControl.designer.cs">
+      <DependentUpon>BrowserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="z Web Browser\BrowserExtendedNavigatingEventArgs.cs" />
+    <Compile Include="z Web Browser\CommandStateEventArgs.cs" />
+    <Compile Include="z Web Browser\ExtendedWebBrowser.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="z Web Browser\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="z Web Browser\MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="z Web Browser\NativeMethods.cs" />
+    <Compile Include="z Web Browser\NotifyCollection.cs" />
+    <Compile Include="z Web Browser\OpenUrlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="z Web Browser\OpenUrlForm.designer.cs">
+      <DependentUpon>OpenUrlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="z Web Browser\OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="z Web Browser\OptionsForm.designer.cs">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="z Web Browser\PopupBlockerFilterLevel.cs" />
+    <Compile Include="z Web Browser\ScriptError.cs" />
+    <Compile Include="z Web Browser\ScriptErrorManager.cs" />
+    <Compile Include="z Web Browser\ScriptErrorWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="z Web Browser\ScriptErrorWindow.Designer.cs">
+      <DependentUpon>ScriptErrorWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="z Web Browser\SettingsHelper.cs" />
+    <Compile Include="z Web Browser\TextChangedEventArgs.cs" />
+    <Compile Include="z Web Browser\UnsafeNativeMethods.cs" />
+    <Compile Include="z Web Browser\UrlContext.cs" />
+    <Compile Include="z Web Browser\WindowManager.cs" />
+    <Compile Include="z Classes\Zipper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cygwin1.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cygz.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ffmpeg.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Finder.ico" />
+    <Content Include="Flash10a.ocx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="flvtool2.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MediaInfo.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.mshtml.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.ReportViewer.Common.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.ReportViewer.ProcessingObjectModel.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.ReportViewer.WinForms.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="proxymode.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="VideoInfo.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="local.prf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="reports.rpt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="reportsDataSet.xsc">
+      <DependentUpon>reportsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="reportsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>reportsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reportsDataSet.xss">
+      <DependentUpon>reportsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\krw\Management.disco" />
+    <None Include="Resources\about.png" />
+    <None Include="desktop.gui">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="dock.gui">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\loading.gif" />
+    <None Include="Resources\loading.back.png" />
+    <None Include="Resources\Mac OS X 3.png" />
+    <None Include="Resources\Mac OS X 2.png" />
+    <None Include="Resources\Mac OS X 1.png" />
+    <None Include="Resources\Finder.png" />
+    <None Include="Resources\uol.bmp" />
+    <None Include="Resources\underscore.bmp" />
+    <None Include="Resources\rj.bmp" />
+    <None Include="Resources\outdent.bmp" />
+    <None Include="Resources\ol.bmp" />
+    <None Include="Resources\lj.bmp" />
+    <None Include="Resources\link.bmp" />
+    <None Include="Resources\italic.bmp" />
+    <None Include="Resources\indent.bmp" />
+    <None Include="Resources\fj.bmp" />
+    <None Include="Resources\color.bmp" />
+    <None Include="Resources\cj.bmp" />
+    <None Include="Resources\bold.bmp" />
+    <None Include="Resources\backcolor.bmp" />
+    <None Include="Resources\skin.pw.png" />
+    <None Include="app.config" />
+    <None Include="z Page Editor\z Runtime.Resources\BTrafcBd.ttf">
+    </None>
+    <None Include="z Page Editor\z Runtime.Resources\BTraffic.ttf">
+    </None>
+    <None Include="Resources\SplashScreen.png" />
+    <None Include="Web References\krw\Management.wsdl" />
+    <None Include="Web References\krw\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="z Web Browser\ExtendedWebBrowser2.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="ShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:54029/krchhto/Management.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\krw\</RelPath>
+      <UpdateFromURL>http://localhost:54029/krchhto/Management.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>krchhto_krw_Management</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="z FLA\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
