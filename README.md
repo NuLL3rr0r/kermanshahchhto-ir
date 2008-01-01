@@ -1,4 +1,4 @@
-kermanshahchhto-ir
+kermanshahchhto.ir
 ==================
 
 A website in ASP.NET (.NET FX 2.0) which uses SOAP/WSDL as its backend and JavaScript AJAX calls as its frontend. It incorporates a desktop based CMS in C# (.NET FX 2.0) for the administerator to do CRUD operations on the website. The CMS offer so many features such as news, page editor, video converter, gallery tool, events tool, image editor, file manager, a built-in browser, reports tools, ... to name a few. In addition to that, despite using AJAX the website is search engine friendly and falls back to plain html in such cases. Moreover, it support all major browsers.
